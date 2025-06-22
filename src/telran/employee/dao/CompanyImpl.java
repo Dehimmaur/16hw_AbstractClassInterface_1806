@@ -118,7 +118,7 @@ public class CompanyImpl implements  Company{
     public void printEmployees() {
         for (Employee employee : employees) {
             if (employee == null) break;
-            // employee.toString()
+            //System.out.println(employee.toString());
             System.out.println("Id: " + employee.getId() +
                     " Name: " + employee.getFirstName() +
                     " Last name: " + employee.getLastName() +

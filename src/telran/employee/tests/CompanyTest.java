@@ -20,7 +20,7 @@ class CompanyTest {
     @BeforeEach
     void setUp() {
         company = new CompanyImpl(5);
-        firm = new Employee[5];
+        firm = new Employee[4];
         firm[0] = new Manager(1000, "John", "Smith", 180, 20_000, 20);
         firm[1] = new WageEmployee(2000, "Mary", "Smith", 180, 50);
         firm[2] = new SalesManager(3000, "Peter", "Jackson", 180, 100_000, 0.05);
@@ -46,7 +46,7 @@ class CompanyTest {
         assertEquals(3, company.size());
         Employee employee = new SalesManager(3000, "Peter", "Jackson", 180, 100_000, 0.05);
         assertEquals(employee, company.removeEmployee(3000));
-        assertEquals(null, company.removeEmployee(10_000));
+        assertNull(company.removeEmployee(10_000));
         assertEquals(2, company.size());
     }
 
